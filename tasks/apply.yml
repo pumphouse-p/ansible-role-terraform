@@ -1,0 +1,22 @@
+---
+- name: "Execute 'terraform apply'"
+  community.general.terraform:
+    project_path: "{{ terraform_project_path }}"
+    state: present
+    force_init: "{{ terraform_force_init }}"
+    init_reconfigure: "{{ terraform_init_reconfigure }}"
+    lock: "{{ terraform_lock }}"
+    overwrite_init: "{{ terraform_overwrite_init }}"
+    purge_workspace: "{{ terraform_purge_workspace }}"
+    workspace: "{{ terraform_workspace }}"
+    backend_config: "{{ terraform_backend_config | default(omit) }}"
+    backend_config_files: "{{ terraform_backend_config_files | default(omit) }}"
+    binary_path: "{{ terraform_backend_binary_path | default(omit) }}"
+    lock_timeout: "{{ terraform_lock_timeout | default(omit) }}"
+    parallelism: "{{ terraform_parallelism | default(omit) }}"
+    plan_file: "{{ terraform_plan_file | default(omit) }}"
+    plugin_paths: "{{ terraform_plugin_paths | default(omit) }}"
+    state_file: "{{ terraform_state_file | default(omit) }}"
+    targets: "{{ terraform_targets | default(omit) }}"
+    variables: "{{ terraform_variables | default(omit) }}"
+    variables_files: "{{ terraform_variables_files | default(omit) }}"

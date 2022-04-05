@@ -1,0 +1,14 @@
+---
+- name: Check for valid operation
+  fail:
+    msg: "Invalid operation specified. Use one of 'apply' or 'destroy'."
+  when: terraform_operation not in ['apply', 'destroy']
+
+- name: "Check for presence of 'terraform_project_path'"
+  fail:
+    msg: "Please provide valid path to terraform configuration."
+  when: terraform_project_path | length < 1
+
+- name: Include task file for {{ terraform_operation }}
+  ansible.builtin.include_tasks:
+    file: "{{ terraform_operation }}.yml"

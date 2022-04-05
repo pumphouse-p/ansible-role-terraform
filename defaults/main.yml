@@ -1,0 +1,10 @@
+---
+terraform_operation: 'apply'
+terraform_project_path: ''
+terraform_check_destroy: true
+terraform_force_init: true
+terraform_init_reconfigure: false
+terraform_lock: true
+terraform_overwrite_init: true
+terraform_purge_workspace: false
+terraform_workspace: 'default'

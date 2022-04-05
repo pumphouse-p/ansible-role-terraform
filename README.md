@@ -55,4 +55,4 @@ GPL
 Author Information
 ------------------
 
-Devin Parrish [GitHub](https://github.com/pumphouse-p)
+Devin Parrish ([GitHub](https://github.com/pumphouse-p))

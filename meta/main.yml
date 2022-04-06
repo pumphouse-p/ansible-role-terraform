@@ -1,14 +1,31 @@
+---
 galaxy_info:
   author: Devin Parrish
+  role_name: terraform
+  namespace: pumphouse_p
   description: Manage infrastructure with Terraform
 
-  license: license (GPL-2.0-or-later, MIT, etc)
+  license: GPL
 
   min_ansible_version: 2.9
 
   galaxy_tags:
     - iaas
     - terraform
+
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
 
 dependencies:
   - terraform

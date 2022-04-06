@@ -1,11 +1,11 @@
 ---
 - name: Check for valid operation
-  fail:
+  ansible.builtin.fail:
     msg: "Invalid operation specified. Use one of 'apply' or 'destroy'."
   when: terraform_operation not in ['apply', 'destroy']
 
 - name: "Check for presence of 'terraform_project_path'"
-  fail:
+  ansible.builtin.fail:
     msg: "Please provide valid path to terraform configuration."
   when: terraform_project_path | length < 1
 

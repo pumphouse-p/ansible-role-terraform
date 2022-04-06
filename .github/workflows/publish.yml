@@ -33,6 +33,6 @@ jobs:
 
       - name: Publish to Ansible Galaxy
         run: >-
-          ansible-galaxy role import --token ${{ secrets.GALAXY_API_TOKEN }}
+          ansible-galaxy role import --token ${ANSIBLE_GALAXY_TOKEN}
                                      --role-name terraform
                                      pumphouse-p ansible-role-terraform
